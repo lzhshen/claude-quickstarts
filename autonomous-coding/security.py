@@ -26,9 +26,11 @@ ALLOWED_COMMANDS = {
     "chmod",  # For making scripts executable; validated separately
     # Directory
     "pwd",
+    "cd",  # 添加：目录切换
     # Node.js development
     "npm",
     "node",
+    "nodemon",  # 添加：开发服务器热重载
     # Version control
     "git",
     # Process management
@@ -36,6 +38,11 @@ ALLOWED_COMMANDS = {
     "lsof",
     "sleep",
     "pkill",  # For killing dev servers; validated separately
+    "kill",   # 添加：进程终止
+    # Network/HTTP
+    "curl",   # 添加：HTTP 请求测试
+    # Shell utilities
+    "true",   # 添加：shell 返回成功状态
     # Script execution
     "init.sh",  # Init scripts; validated separately
 }

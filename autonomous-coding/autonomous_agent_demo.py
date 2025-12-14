@@ -76,13 +76,13 @@ def main() -> None:
     """Main entry point."""
     args = parse_args()
 
-    # Check for API key
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("Error: ANTHROPIC_API_KEY environment variable not set")
-        print("\nGet your API key from: https://console.anthropic.com/")
-        print("\nThen set it:")
-        print("  export ANTHROPIC_API_KEY='your-api-key-here'")
-        return
+    # API Key 检查已禁用 - 使用 Claude Code CLI 的配置
+    # if not os.environ.get("ANTHROPIC_API_KEY"):
+    #     print("Error: ANTHROPIC_API_KEY environment variable not set")
+    #     print("\\nGet your API key from: https://console.anthropic.com/")
+    #     print("\\nThen set it:")
+    #     print("  export ANTHROPIC_API_KEY='your-api-key-here'")
+    #     return
 
     # Automatically place projects in generations/ directory unless already specified
     project_dir = args.project_dir
