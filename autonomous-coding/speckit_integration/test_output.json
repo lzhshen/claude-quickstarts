@@ -1,0 +1,1482 @@
+[
+  {
+    "category": "functional",
+    "description": "[T001] 根据实现计划创建项目结构 backend/ 和 frontend/",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T001",
+    "user_story": "项目初始化 (共享基础设施)",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T002] 在 backend/requirements.txt 中初始化 Python FastAPI 项目及依赖",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T002",
+    "user_story": "项目初始化 (共享基础设施)",
+    "file_path": "backend/requirements.txt",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T003] 在 frontend/package.json 中初始化 React TypeScript 项目及依赖",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T003",
+    "user_story": "项目初始化 (共享基础设施)",
+    "file_path": "frontend/package.json",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T004] 配置 ESLint 和 Prettier 保证前端代码质量",
+    "steps": [
+      "Step 1: 验证配置文件存在且语法正确",
+      "Step 2: 启动相关服务验证配置生效",
+      "Step 3: 验证环境变量正确加载"
+    ],
+    "passes": true,
+    "source_task_id": "T004",
+    "user_story": "项目初始化 (共享基础设施)",
+    "file_path": null,
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T005] 配置 Black 和 isort 进行后端代码格式化",
+    "steps": [
+      "Step 1: 验证配置文件存在且语法正确",
+      "Step 2: 启动相关服务验证配置生效",
+      "Step 3: 验证环境变量正确加载"
+    ],
+    "passes": true,
+    "source_task_id": "T005",
+    "user_story": "项目初始化 (共享基础设施)",
+    "file_path": null,
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T006] 在 frontend/tsconfig.json 中设置 TypeScript 配置",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T006",
+    "user_story": "项目初始化 (共享基础设施)",
+    "file_path": "frontend/tsconfig.json",
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T007] 在 frontend/tailwind.config.js 中配置 Tailwind CSS",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T007",
+    "user_story": "项目初始化 (共享基础设施)",
+    "file_path": "frontend/tailwind.config.js",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T008] 在 backend/app/core/database.py 中设置 SQLite 数据库配置",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T008",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": "backend/app/core/database.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T009] 在 backend/app/core/database.py 中配置 SQLAlchemy ORM",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T009",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": "backend/app/core/database.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T010] 在 backend/alembic/ 中设置 Alembic 迁移框架",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T010",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T011] 在 backend/app/main.py 中配置 FastAPI CORS 中间件",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T011",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": "backend/app/main.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T012] 在 backend/app/core/errors.py 中设置错误处理中间件",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T012",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": "backend/app/core/errors.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T013] 在 backend/app/core/config.py 中配置环境设置",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T013",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": "backend/app/core/config.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T014] 在 backend/app/core/logging.py 中设置日志基础设施",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T014",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": "backend/app/core/logging.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T015] 在 backend/app/api/router.py 中创建基础 API 路由结构",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T015",
+    "user_story": "基础设置 (阻塞性前置条件)",
+    "file_path": "backend/app/api/router.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T016] 在 backend/tests/contract/test_get_tasks.py 中编写 GET /tasks 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T016",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/tests/contract/test_get_tasks.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T017] 在 backend/tests/contract/test_create_task.py 中编写 POST /tasks 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T017",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/tests/contract/test_create_task.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T018] 在 backend/tests/contract/test_update_task.py 中编写 PUT /tasks/{id} 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T018",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/tests/contract/test_update_task.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T019] 在 backend/tests/contract/test_delete_task.py 中编写 DELETE /tasks/{id} 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T019",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/tests/contract/test_delete_task.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T020] 在 backend/tests/integration/test_task_crud.py 中编写任务 CRUD 流程的集成测试",
+    "steps": [
+      "Step 1: 准备测试数据库环境",
+      "Step 2: 运行集成测试",
+      "Step 3: 验证端到端流程正确",
+      "Step 4: 清理测试数据"
+    ],
+    "passes": true,
+    "source_task_id": "T020",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/tests/integration/test_task_crud.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T021] 在 frontend/src/components/TaskForm/TaskForm.test.tsx 中编写 React 组件测试 - TaskForm",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T021",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/components/TaskForm/TaskForm.test.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T022] 在 frontend/src/components/TaskList/TaskList.test.tsx 中编写 React 组件测试 - TaskList",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T022",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/components/TaskList/TaskList.test.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T023] 在 frontend/src/components/TaskItem/TaskItem.test.tsx 中编写 React 组件测试 - TaskItem",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T023",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/components/TaskItem/TaskItem.test.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T024] 在 backend/app/models/task.py 中创建 Task SQLAlchemy 模型",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T024",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/app/models/task.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T025] 在 backend/app/schemas/task.py 中创建 Task Pydantic 模式",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T025",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/app/schemas/task.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T026] 为任务表创建数据库迁移",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": true,
+    "source_task_id": "T026",
+    "user_story": "创建和管理任务",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T027] 在 backend/app/services/task_service.py 中实现 TaskService",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T027",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/app/services/task_service.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T028] 在 backend/app/api/endpoints/tasks.py 中实现 GET /tasks 端点",
+    "steps": [
+      "Step 1: 启动后端开发服务器",
+      "Step 2: 发送 GET 请求到端点",
+      "Step 3: 验证响应状态码为 200",
+      "Step 4: 验证响应数据结构正确",
+      "Step 5: 在浏览器中验证 API 可用"
+    ],
+    "passes": true,
+    "source_task_id": "T028",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T029] 在 backend/app/api/endpoints/tasks.py 中实现 POST /tasks 端点",
+    "steps": [
+      "Step 1: 启动后端开发服务器",
+      "Step 2: 准备有效的请求体",
+      "Step 3: 发送 POST 请求",
+      "Step 4: 验证响应状态码为 201",
+      "Step 5: 验证资源已正确创建"
+    ],
+    "passes": true,
+    "source_task_id": "T029",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T030] 在 backend/app/api/endpoints/tasks.py 中实现 PUT /tasks/{id} 端点",
+    "steps": [
+      "Step 1: 确保目标资源存在",
+      "Step 2: 发送更新请求",
+      "Step 3: 验证响应包含更新后的数据",
+      "Step 4: 验证数据库中数据已更新"
+    ],
+    "passes": true,
+    "source_task_id": "T030",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T031] 在 backend/app/api/endpoints/tasks.py 中实现 DELETE /tasks/{id} 端点",
+    "steps": [
+      "Step 1: 确保目标资源存在",
+      "Step 2: 发送删除请求",
+      "Step 3: 验证响应状态码为 200 或 204",
+      "Step 4: 验证资源已从数据库删除"
+    ],
+    "passes": true,
+    "source_task_id": "T031",
+    "user_story": "创建和管理任务",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T032] 在 frontend/src/services/api.ts 中创建 API 服务层",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T032",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/services/api.ts",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T033] 在 frontend/src/types/task.ts 中创建 Task 类型定义",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T033",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/types/task.ts",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T034] 在 frontend/src/components/TaskForm/TaskForm.tsx 中实现 TaskForm 组件",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 TaskForm 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误",
+      "Step 6: 填写表单字段",
+      "Step 7: 提交表单并验证反馈",
+      "Step 8: 验证表单验证规则生效"
+    ],
+    "passes": true,
+    "source_task_id": "T034",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/components/TaskForm/TaskForm.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T035] 在 frontend/src/components/TaskItem/TaskItem.tsx 中实现 TaskItem 组件",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 TaskItem 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T035",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/components/TaskItem/TaskItem.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T036] 在 frontend/src/components/TaskList/TaskList.tsx 中实现 TaskList 组件",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 TaskList 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误",
+      "Step 6: 验证列表正确显示数据",
+      "Step 7: 测试列表项的交互功能"
+    ],
+    "passes": true,
+    "source_task_id": "T036",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/components/TaskList/TaskList.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T037] 在 frontend/src/App.tsx 中实现带有任务管理功能的主 App 组件",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 App 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T037",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/App.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T038] 在 frontend/src/components/TaskForm/TaskForm.tsx 中添加任务创建的表单验证",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 TaskForm 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误",
+      "Step 6: 填写表单字段",
+      "Step 7: 提交表单并验证反馈",
+      "Step 8: 验证表单验证规则生效"
+    ],
+    "passes": true,
+    "source_task_id": "T038",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/components/TaskForm/TaskForm.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T039] 在 frontend/src/services/api.ts 中为 API 调用添加错误处理",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T039",
+    "user_story": "创建和管理任务",
+    "file_path": "frontend/src/services/api.ts",
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T040] 使用 Tailwind CSS 暖色系为组件添加样式",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 暖色系为 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T040",
+    "user_story": "创建和管理任务",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T041] 在 backend/tests/contract/test_complete_task.py 中编写 PATCH /tasks/{id}/complete 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T041",
+    "user_story": "任务归档管理",
+    "file_path": "backend/tests/contract/test_complete_task.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T042] 在 backend/tests/contract/test_archive_task.py 中编写 PATCH /tasks/{id}/archive 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T042",
+    "user_story": "任务归档管理",
+    "file_path": "backend/tests/contract/test_archive_task.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T043] 在 backend/tests/integration/test_task_archive.py 中编写归档流程的集成测试",
+    "steps": [
+      "Step 1: 准备测试数据库环境",
+      "Step 2: 运行集成测试",
+      "Step 3: 验证端到端流程正确",
+      "Step 4: 清理测试数据"
+    ],
+    "passes": true,
+    "source_task_id": "T043",
+    "user_story": "任务归档管理",
+    "file_path": "backend/tests/integration/test_task_archive.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T044] 在 frontend/src/components/TaskItem/TaskItem.test.tsx 中编写 React 测试 - 完成状态切换",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T044",
+    "user_story": "任务归档管理",
+    "file_path": "frontend/src/components/TaskItem/TaskItem.test.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T045] 在 frontend/src/components/ArchiveView/ArchiveView.test.tsx 中编写 React 测试 - ArchiveView 组件",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T045",
+    "user_story": "任务归档管理",
+    "file_path": "frontend/src/components/ArchiveView/ArchiveView.test.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T046] 在 backend/app/models/task.py 中更新 Task 模型以支持归档功能",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T046",
+    "user_story": "任务归档管理",
+    "file_path": "backend/app/models/task.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T047] 在 backend/app/schemas/task.py 中更新 Task 模式以包含 archived_at 字段",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T047",
+    "user_story": "任务归档管理",
+    "file_path": "backend/app/schemas/task.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T048] 为归档功能创建数据库迁移",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": true,
+    "source_task_id": "T048",
+    "user_story": "任务归档管理",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T049] 在 backend/app/services/task_service.py 中更新 TaskService 的归档方法",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T049",
+    "user_story": "任务归档管理",
+    "file_path": "backend/app/services/task_service.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T050] 在 backend/app/api/endpoints/tasks.py 中实现 PATCH /tasks/{id}/complete 端点",
+    "steps": [
+      "Step 1: 确保目标资源存在",
+      "Step 2: 发送更新请求",
+      "Step 3: 验证响应包含更新后的数据",
+      "Step 4: 验证数据库中数据已更新"
+    ],
+    "passes": true,
+    "source_task_id": "T050",
+    "user_story": "任务归档管理",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T051] 在 backend/app/api/endpoints/tasks.py 中实现 PATCH /tasks/{id}/archive 端点",
+    "steps": [
+      "Step 1: 确保目标资源存在",
+      "Step 2: 发送更新请求",
+      "Step 3: 验证响应包含更新后的数据",
+      "Step 4: 验证数据库中数据已更新"
+    ],
+    "passes": true,
+    "source_task_id": "T051",
+    "user_story": "任务归档管理",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T052] 在 backend/app/api/endpoints/tasks.py 中更新 GET /tasks 以支持归档过滤",
+    "steps": [
+      "Step 1: 启动后端开发服务器",
+      "Step 2: 发送 GET 请求到端点",
+      "Step 3: 验证响应状态码为 200",
+      "Step 4: 验证响应数据结构正确",
+      "Step 5: 在浏览器中验证 API 可用"
+    ],
+    "passes": true,
+    "source_task_id": "T052",
+    "user_story": "任务归档管理",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T053] 在 frontend/src/components/TaskItem/TaskItem.tsx 中添加完成状态切换功能",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 TaskItem 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T053",
+    "user_story": "任务归档管理",
+    "file_path": "frontend/src/components/TaskItem/TaskItem.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T054] 在 frontend/src/components/ArchiveView/ArchiveView.tsx 中创建 ArchiveView 组件",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 ArchiveView 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T054",
+    "user_story": "任务归档管理",
+    "file_path": "frontend/src/components/ArchiveView/ArchiveView.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T055] 在 UI 组件中添加归档/取消归档按钮",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 UI 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T055",
+    "user_story": "任务归档管理",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T056] 在活动任务和归档视图之间实现导航",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": true,
+    "source_task_id": "T056",
+    "user_story": "任务归档管理",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T057] 为已完成的任务添加视觉指示器",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": true,
+    "source_task_id": "T057",
+    "user_story": "任务归档管理",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T057] 在 backend/tests/contract/test_export_tasks.py 中编写 GET /tasks/export/json 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T057",
+    "user_story": "数据导出功能",
+    "file_path": "backend/tests/contract/test_export_tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T058] 在 frontend/src/services/api.ts 中更新 API 服务以支持归档操作",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T058",
+    "user_story": "任务归档管理",
+    "file_path": "frontend/src/services/api.ts",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T058] 在 backend/tests/contract/test_export_tasks.py 中编写 GET /tasks/export/csv 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": true,
+    "source_task_id": "T058",
+    "user_story": "数据导出功能",
+    "file_path": "backend/tests/contract/test_export_tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T059] 在 backend/tests/contract/test_export_json.py 中编写 GET /export/json 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": false,
+    "source_task_id": "T059",
+    "user_story": "数据导出功能",
+    "file_path": "backend/tests/contract/test_export_json.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T059] 在 backend/tests/integration/test_task_export.py 中编写导出功能的集成测试",
+    "steps": [
+      "Step 1: 准备测试数据库环境",
+      "Step 2: 运行集成测试",
+      "Step 3: 验证端到端流程正确",
+      "Step 4: 清理测试数据"
+    ],
+    "passes": true,
+    "source_task_id": "T059",
+    "user_story": "数据导出功能",
+    "file_path": "backend/tests/integration/test_task_export.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T060] 在 backend/tests/contract/test_export_csv.py 中编写 GET /export/csv 的契约测试",
+    "steps": [
+      "Step 1: 确保后端服务已启动",
+      "Step 2: 运行契约测试命令",
+      "Step 3: 验证所有测试用例通过",
+      "Step 4: 检查测试覆盖率报告"
+    ],
+    "passes": false,
+    "source_task_id": "T060",
+    "user_story": "数据导出功能",
+    "file_path": "backend/tests/contract/test_export_csv.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T060] 在 frontend/src/components/ExportButton/ExportButton.test.tsx 中编写 React 组件测试 - ExportButton",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T060",
+    "user_story": "数据导出功能",
+    "file_path": "frontend/src/components/ExportButton/ExportButton.test.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T061] 在 backend/tests/integration/test_export.py 中编写导出功能的集成测试",
+    "steps": [
+      "Step 1: 准备测试数据库环境",
+      "Step 2: 运行集成测试",
+      "Step 3: 验证端到端流程正确",
+      "Step 4: 清理测试数据"
+    ],
+    "passes": false,
+    "source_task_id": "T061",
+    "user_story": "数据导出功能",
+    "file_path": "backend/tests/integration/test_export.py",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T061] 在 backend/app/services/task_service.py 中实现 export_tasks_json 方法",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T061",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/services/task_service.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T062] 在 frontend/src/components/ExportButton/ExportButton.test.tsx 中编写 React 测试 - ExportButton 组件",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T062",
+    "user_story": "数据导出功能",
+    "file_path": "frontend/src/components/ExportButton/ExportButton.test.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T062] 在 backend/app/services/task_service.py 中实现 export_tasks_csv 方法",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": true,
+    "source_task_id": "T062",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/services/task_service.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T063] 在 backend/app/services/export_service.py 中创建导出服务",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": false,
+    "source_task_id": "T063",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/services/export_service.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T063] 在 backend/app/api/endpoints/tasks.py 中实现 GET /tasks/export/json 端点",
+    "steps": [
+      "Step 1: 启动后端开发服务器",
+      "Step 2: 发送 GET 请求到端点",
+      "Step 3: 验证响应状态码为 200",
+      "Step 4: 验证响应数据结构正确",
+      "Step 5: 在浏览器中验证 API 可用"
+    ],
+    "passes": true,
+    "source_task_id": "T063",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T064] 在 backend/app/api/endpoints/export.py 中实现 GET /export/json 端点",
+    "steps": [
+      "Step 1: 启动后端开发服务器",
+      "Step 2: 发送 GET 请求到端点",
+      "Step 3: 验证响应状态码为 200",
+      "Step 4: 验证响应数据结构正确",
+      "Step 5: 在浏览器中验证 API 可用"
+    ],
+    "passes": false,
+    "source_task_id": "T064",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/api/endpoints/export.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T064] 在 backend/app/api/endpoints/tasks.py 中实现 GET /tasks/export/csv 端点",
+    "steps": [
+      "Step 1: 启动后端开发服务器",
+      "Step 2: 发送 GET 请求到端点",
+      "Step 3: 验证响应状态码为 200",
+      "Step 4: 验证响应数据结构正确",
+      "Step 5: 在浏览器中验证 API 可用"
+    ],
+    "passes": true,
+    "source_task_id": "T064",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/api/endpoints/tasks.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T065] 在 backend/app/api/endpoints/export.py 中实现 GET /export/csv 端点",
+    "steps": [
+      "Step 1: 启动后端开发服务器",
+      "Step 2: 发送 GET 请求到端点",
+      "Step 3: 验证响应状态码为 200",
+      "Step 4: 验证响应数据结构正确",
+      "Step 5: 在浏览器中验证 API 可用"
+    ],
+    "passes": false,
+    "source_task_id": "T065",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/api/endpoints/export.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T065] 在 frontend/src/services/api.ts 中添加 exportTasksJson 和 exportTasksCsv 方法",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T065",
+    "user_story": "数据导出功能",
+    "file_path": "frontend/src/services/api.ts",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T066] 在 backend/app/utils/csv_formatter.py 中添加 CSV 格式化工具",
+    "steps": [
+      "Step 1: 启动后端服务器",
+      "Step 2: 验证 API 端点可访问",
+      "Step 3: 测试正常请求场景",
+      "Step 4: 测试错误处理场景"
+    ],
+    "passes": false,
+    "source_task_id": "T066",
+    "user_story": "数据导出功能",
+    "file_path": "backend/app/utils/csv_formatter.py",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T067] 在 frontend/src/components/ExportButton/ExportButton.tsx 中创建 ExportButton 组件",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 ExportButton 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T067",
+    "user_story": "数据导出功能",
+    "file_path": "frontend/src/components/ExportButton/ExportButton.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T067] 在 frontend/src/components/ExportButton/ExportButton.tsx 中创建 ExportButton 组件",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 ExportButton 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T067",
+    "user_story": "数据导出功能",
+    "file_path": "frontend/src/components/ExportButton/ExportButton.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T068] 实现导出格式选择 UI",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T068",
+    "user_story": "数据导出功能",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T069] 在 frontend/src/utils/fileDownload.ts 中添加文件下载功能",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T069",
+    "user_story": "数据导出功能",
+    "file_path": "frontend/src/utils/fileDownload.ts",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T070] 更新主导航以包含导出选项",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T070",
+    "user_story": "数据导出功能",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T070] 在 frontend/src/App.tsx 中集成导出功能",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T070",
+    "user_story": "数据导出功能",
+    "file_path": "frontend/src/App.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T071] 添加导出统计信息显示",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T071",
+    "user_story": "数据导出功能",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T072] 使用 Tailwind CSS 暖色系为导出组件添加样式",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 暖色系为导出 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T072",
+    "user_story": "数据导出功能",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T072] 使用 Tailwind CSS 暖色系为导出组件添加样式",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 暖色系为导出 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": true,
+    "source_task_id": "T072",
+    "user_story": "数据导出功能",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T073] 为所有组件添加加载状态",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 为所有 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T073",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T074] 在 frontend/src/components/ErrorBoundary/ErrorBoundary.tsx 中实现错误边界",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 ErrorBoundary 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T074",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": "frontend/src/components/ErrorBoundary/ErrorBoundary.tsx",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T075] 在 frontend/src/components/Toast/Toast.tsx 中添加 toast 通知以提供用户反馈",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 Toast 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T075",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": "frontend/src/components/Toast/Toast.tsx",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T076] 为移动设备实现响应式设计",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T076",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T077] 在整个应用中添加快捷键导航支持",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T077",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T078] 在 frontend/vite.config.ts 中通过代码分割优化 bundle 大小",
+    "steps": [
+      "Step 1: 启动前端开发服务器",
+      "Step 2: 导航到包含该组件的页面",
+      "Step 3: 验证 该 组件渲染正确",
+      "Step 4: 截图验证 UI 外观",
+      "Step 5: 验证无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T078",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": "frontend/vite.config.ts",
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T079] 添加无障碍功能 (ARIA 标签、屏幕阅读器支持)",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T079",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T080] 在前端和后端都实现数据验证",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T080",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T081] 使用 React DevTools 添加性能监控",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T081",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T082] 创建全面的 API 文档",
+    "steps": [
+      "Step 1: 验证代码文件 相关文件 存在",
+      "Step 2: 运行相关测试",
+      "Step 3: 验证功能正常工作"
+    ],
+    "passes": false,
+    "source_task_id": "T082",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": false
+  },
+  {
+    "category": "style",
+    "description": "[T083] 运行 quickstart.md 验证测试",
+    "steps": [
+      "Step 1: 运行相关测试命令",
+      "Step 2: 验证测试通过",
+      "Step 3: 检查测试输出日志"
+    ],
+    "passes": false,
+    "source_task_id": "T083",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": "quickstart.md",
+    "is_parallel": false
+  },
+  {
+    "category": "functional",
+    "description": "[T084] 在 backend/tests/unit/ 中为边界情况添加额外的单元测试",
+    "steps": [
+      "Step 1: 运行相关测试命令",
+      "Step 2: 验证测试通过",
+      "Step 3: 检查测试输出日志"
+    ],
+    "passes": false,
+    "source_task_id": "T084",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": true
+  },
+  {
+    "category": "functional",
+    "description": "[T085] 在 frontend/src/components/ 中为边界情况添加额外的 React 组件测试",
+    "steps": [
+      "Step 1: 运行前端组件测试",
+      "Step 2: 验证组件渲染正确",
+      "Step 3: 验证交互行为符合预期",
+      "Step 4: 检查无控制台错误"
+    ],
+    "passes": false,
+    "source_task_id": "T085",
+    "user_story": "优化 & 跨领域关注点",
+    "file_path": null,
+    "is_parallel": true
+  }
+]
