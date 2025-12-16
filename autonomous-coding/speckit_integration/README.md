@@ -45,7 +45,7 @@
 | **运行模式** | 多会话自主循环，无人值守 | 交互式 slash 命令，人工触发 |
 | **验证方式** | Puppeteer 浏览器自动化 + 截图 | 依赖 TDD，测试先行 |
 | **安全机制** | 沙箱 + 文件限制 + 命令白名单 | 无内置安全隔离 |
-| **工作流阶段** | 初始化 → 编码（双智能体） | constitution → specify → plan → tasks → implement |
+| **工作流阶段** | 初始化 → 编码（双智能体） | constitution → specify → clarify → plan → tasks → analyze → checklist → implement |
 
 ### 2.2 tasks.md 与 feature_list.json 结构差异
 
@@ -73,7 +73,49 @@
 }
 ```
 
-### 2.3 互补优势分析
+### 2.3 spec-kit 完整工作流阶段说明
+
+> **重要**：spec-kit 包含 9 个命令，构成完整的规格驱动开发工作流。
+
+| 阶段 | 命令 | 功能说明 | 是否必需 |
+|-----|------|---------|--------|
+| 1 | `/speckit.constitution` | 定义项目原则和非可协商规则 | ✅ 推荐 |
+| 2 | `/speckit.specify` | 创建功能规格 + 自动创建 Git 分支 | ✅ 必需 |
+| 3 | `/speckit.clarify` | 消除规格模糊点（最多 5 个问题） | 可选 |
+| 4 | `/speckit.plan` | 制定技术计划、数据模型、API 契约 | ✅ 必需 |
+| 5 | `/speckit.tasks` | 任务分解（按用户故事组织） | ✅ 必需 |
+| 6 | `/speckit.analyze` | 跨工件一致性检查（非破坏性） | ✅ 推荐 |
+| 7 | `/speckit.checklist` | 生成"需求质量检查清单" | 可选 |
+| 8 | `/speckit.implement` | 执行实现（检查 checklist 后执行） | ✅ 必需 |
+| 9 | `/speckit.taskstoissues` | 将任务转换为 GitHub Issues | 可选 |
+
+### 2.4 spec-kit 核心理念："Unit Tests for English"
+
+spec-kit 的 checklist 不是传统的验证测试，而是**需求质量的单元测试**：
+
+```markdown
+❌ WRONG（测试实现）：
+- "Verify landing page displays 3 cards"
+- "Test hover states work correctly"
+
+✅ CORRECT（测试需求质量）：
+- "Are the exact number and layout of cards specified?" [Completeness]
+- "Is 'prominent display' quantified with sizing/positioning?" [Clarity]
+- "Are hover state requirements consistent across elements?" [Consistency]
+```
+
+**核心思想**：如果规格是用英语写的"代码"，checklist 就是它的单元测试套件。
+
+### 2.5 Constitution 权威性机制
+
+Constitution 在 spec-kit 中具有**非可协商**的权威性：
+
+- `speckit.analyze` 会严格验证 constitution 合规性
+- `speckit.plan` 中有 "Constitution Check" 环节
+- 违反 MUST 原则的问题自动标记为 **CRITICAL**
+- Constitution 规则应注入到 autonomous-coding 的智能体提示词中
+
+### 2.6 互补优势分析
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -84,6 +126,9 @@
 │  • 精确文件路径                                                   │
 │  • 并行任务标记 [P]                                               │
 │  • TDD 结构化                                                    │
+│  • Constitution 权威规则                                          │
+│  • "Unit Tests for English" 需求质量检查                         │
+│  • 跨工件一致性分析                                               │
 └───────────────────────────┬─────────────────────────────────────┘
                             │
                             ▼
@@ -122,22 +167,31 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                     规格定义阶段（人工）                          │
 ├─────────────────────────────────────────────────────────────────┤
-│  /speckit.constitution → /speckit.specify → /speckit.plan       │
-│                           → /speckit.tasks                       │
+│  1. /speckit.constitution → (项目原则)                           │
+│  2. /speckit.specify → (功能规格 + 自动创建 Git 分支)             │
+│  3. /speckit.clarify → (消除模糊点，可选但推荐)                   │
+│  4. /speckit.plan → (技术计划、数据模型、API 契约)                │
+│  5. /speckit.tasks → (任务分解)                                  │
+│  6. /speckit.analyze → (一致性检查，推荐)                        │
+│  7. /speckit.checklist → (需求质量检查，可选)                    │
 └───────────────────────────────┬─────────────────────────────────┘
                                 │
                                 ▼
                     ┌───────────────────────┐
                     │      转换层（自动）     │
-                    │  tasks.md → feature_  │
-                    │    list.json 转换器   │
+                    │  • pre_convert_       │
+                    │    validator.py       │
+                    │  • converter.py       │
+                    │  • constitution_      │
+                    │    injector.py        │
                     └───────────┬───────────┘
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                   自主开发阶段（无人值守）                         │
 ├─────────────────────────────────────────────────────────────────┤
-│  初始化智能体 → 编码智能体循环 → 浏览器验证 → 状态同步            │
+│  初始化智能体(含 Constitution) → 编码智能体循环(含 Checklist 参考)│
+│  → 浏览器验证 → Constitution 合规检查 → 状态同步                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -202,25 +256,44 @@
 | `[P]` 并行标记 | `is_parallel` 字段 |
 | 文件路径 | `file_path` 字段 |
 
-### 4.3 转换后的 feature_list.json 结构
+### 4.3 转换后的 feature_list.json 结构（增强版）
 
 ```json
 {
   "category": "functional",
-  "description": "[T024] 在 backend/app/models/task.py 中创建 Task SQLAlchemy 模型",
+  "description": "[T024] [US1] 在 backend/app/models/task.py 中创建 Task SQLAlchemy 模型",
   "steps": [
     "Step 1: 验证模型文件语法正确",
     "Step 2: 运行数据库迁移",
     "Step 3: 验证表结构创建成功",
     "Step 4: 测试基本 CRUD 操作"
   ],
-  "passes": true,
+  "passes": false,
+  
+  // 基础元数据
   "source_task_id": "T024",
   "user_story": "创建和管理任务",
   "file_path": "backend/app/models/task.py",
-  "is_parallel": false
+  "is_parallel": false,
+  
+  // 新增：Phase 信息
+  "phase": "User Story 1",
+  "phase_number": 3,
+  "priority": "P1",
+  
+  // 新增：MVP 和独立测试信息
+  "is_mvp": true,
+  "independent_test": "验证任务表已创建且可 CRUD",
+  
+  // 新增：Constitution 规则引用
+  "constitution_rules": ["TDD mandatory", "Integration testing required"],
+  
+  // 新增：Checklist 引用
+  "checklist_refs": ["CHK012", "CHK015"]
 }
 ```
+
+> **注意**：增强版结构保留了更多 speckit 的元数据，便于追溯和质量管控。
 
 ---
 
@@ -228,16 +301,32 @@
 
 ```
 project/
+├── .specify/
+│   ├── memory/
+│   │   └── constitution.md      # 项目原则（非可协商）
+│   ├── scripts/bash/            # speckit 依赖的脚本
+│   │   ├── create-new-feature.sh
+│   │   ├── check-prerequisites.sh
+│   │   ├── setup-plan.sh
+│   │   └── update-agent-context.sh
+│   └── templates/               # 模板文件
 ├── specs/
 │   └── 001-todo-app/
 │       ├── spec.md              # spec-kit: 功能规格
 │       ├── plan.md              # spec-kit: 实现计划
 │       ├── tasks.md             # spec-kit: 任务清单（主数据）
 │       ├── research.md          # spec-kit: 技术调研
-│       └── data-model.md        # spec-kit: 数据模型
+│       ├── data-model.md        # spec-kit: 数据模型
+│       ├── contracts/           # spec-kit: API 契约
+│       └── checklists/          # spec-kit: 需求质量检查清单
+│           ├── ux.md
+│           ├── api.md
+│           └── security.md
 ├── speckit_integration/
 │   ├── converter.py             # 转换器脚本
 │   ├── sync_status.py           # 状态同步脚本
+│   ├── pre_convert_validator.py # 预转换验证器（新增）
+│   ├── constitution_injector.py # 原则注入器（新增）
 │   ├── initializer_prompt_speckit.md  # 初始化智能体提示词
 │   └── coding_prompt_speckit.md       # 编码智能体提示词
 ├── feature_list.json            # autonomous-coding: 派生的测试清单
@@ -378,22 +467,49 @@ python sync_status.py <feature_list_json> <tasks_md_path>
 
 ## 八、后续优化建议
 
-### 8.1 短期优化
+### 8.1 P0：立即实施（文档优化）
 
-1. **集成到 `agent.py`**：自动检测 specs/ 目录并使用 spec-kit 模式
-2. **实时同步**：在每次 feature 完成后自动同步，无需手动运行
+1. ✅ **补充完整工作流阶段**：已在本文档中更新
+2. ✅ **说明 Constitution 权威性**：已添加相关章节
+3. ✅ **增强 feature_list.json 结构**：已添加新字段说明
 
-### 8.2 中期优化
+### 8.2 P1：优先实施（转换器增强）
 
-1. **PR 生成**：每个用户故事完成后自动创建 Pull Request
-2. **测试报告**：生成测试覆盖率和验证截图报告
-3. **Web Dashboard**：可视化进度追踪界面
+1. **增强 converter.py**：
+   - 保留 Phase/MVP/独立测试等元数据
+   - 关联 checklist 引用
+   - 提取 constitution 规则
 
-### 8.3 长期优化
+2. **新增 constitution_injector.py**：
+   - 读取 `.specify/memory/constitution.md`
+   - 提取 MUST/SHOULD 规则
+   - 注入到智能体提示词
+
+3. **更新智能体提示词**：
+   - 添加 Constitution 合规检查环节
+   - 添加 Checklist 参考机制
+
+### 8.3 P2：中期实施（质量门控）
+
+1. **新增 pre_convert_validator.py**：
+   - 转换前检查 analyze 报告
+   - 如有 CRITICAL 问题则阻止转换
+   - 检查 checklist 完成状态
+
+2. **Checklist 机制复用**：
+   - 为每个 feature 关联 checklist 项
+   - 作为额外质量门控
+
+3. **PR 生成**：每个用户故事完成后自动创建 Pull Request
+4. **测试报告**：生成测试覆盖率和验证截图报告
+
+### 8.4 P3：长期实施（高级功能）
 
 1. **多 Agent 协作**：不同用户故事分配给不同 Agent 并行开发
 2. **智能调度**：根据任务依赖自动调度最优执行顺序
 3. **自愈机制**：自动检测和修复回归问题
+4. **Web Dashboard**：可视化进度追踪界面
+5. **脚本集成**：考虑移植 speckit bash 脚本功能到 Python
 
 ---
 
@@ -413,4 +529,5 @@ python sync_status.py <feature_list_json> <tasks_md_path>
 ---
 
 *本方案由 autonomous-coding × spec-kit 集成分析生成*
-*最后更新: 2025-12-15*
+*最后更新: 2025-12-16*
+*基于 speckit 完整工作流（9 个命令）深度分析后优化*
